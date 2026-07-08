@@ -87,8 +87,8 @@ const nav = [
     heading: 'Contacto',
     links: [
       { label: 'Iniciar proyecto',  href: '#contacto' },
-      { label: 'hola@monarcacore.com', href: '#contacto' },
-      { label: '+51 999 000 000',   href: '#contacto' },
+      { label: 'monarcatechnology01@gmail.com', href: '#contacto' },
+      { label: '+51 969 943 657',   href: '#contacto' },
     ],
   },
 ]

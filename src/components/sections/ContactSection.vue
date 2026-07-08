@@ -68,7 +68,7 @@
               </div>
               <div>
                 <span class="contact__info-label">Correo</span>
-                <span class="contact__info-val">hola@monarcacore.com</span>
+                <span class="contact__info-val">monarcatechnology01@gmail.com</span>
               </div>
             </div>
 
@@ -81,7 +81,7 @@
               </div>
               <div>
                 <span class="contact__info-label">WhatsApp</span>
-                <span class="contact__info-val">+51 999 000 000</span>
+                <span class="contact__info-val">+51 969 943 657</span>
               </div>
             </div>
 
@@ -152,11 +152,34 @@ const serviceOptions = [
 ]
 
 const submitForm = async () => {
+  // 1. Activar estado de carga en el botón
   sending.value = true
-  await new Promise(r => setTimeout(r, 1400))
+
+  // 2. Preparar los datos para WhatsApp
+  const telefono = '51969943657' 
+  const textoMensaje = `Hola Monarca Core, me gustaría hablar sobre un proyecto:
+  
+*Nombre:* ${form.value.name}
+*Correo:* ${form.value.email}
+*Servicio de interés:* ${form.value.service}
+
+*Detalles del proyecto:* ${form.value.message}`
+
+  const mensajeCodificado = encodeURIComponent(textoMensaje)
+  const urlWhatsApp = `https://wa.me/${telefono}?text=${mensajeCodificado}`
+
+  // 3. Pequeña pausa simulada para feedback visual (opcional, buena práctica de UX)
+  await new Promise(r => setTimeout(r, 600))
+  
+  // 4. Abrir WhatsApp en una nueva pestaña
+  window.open(urlWhatsApp, '_blank')
+
+  // 5. Restablecer estados y limpiar el formulario
   sending.value = false
   sent.value = true
   form.value = { name: '', email: '', service: '', message: '' }
+  
+  // 6. Ocultar el mensaje de éxito después de 5 segundos
   setTimeout(() => (sent.value = false), 5000)
 }
 </script>

@@ -1,0 +1,54 @@
+Proyecto: landing-monarca
+
+├── .env
+├── .gitignore
+├── README.md
+├── estructura_proyecto.txt
+├── generar_estructura.py
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── Logo.png
+│   ├── about.jpg
+│   ├── favicon.svg
+│   ├── icons.svg
+│   └── logmonarca.png
+├── src
+│   ├── App.vue
+│   ├── components
+│   │   ├── effects
+│   │   │   ├── NeuralNetwork.vue
+│   │   │   ├── ParticlesBg.vue
+│   │   │   └── TypewriterText.vue
+│   │   ├── layout
+│   │   │   ├── FooterSection.vue
+│   │   │   └── NavBar.vue
+│   │   ├── sections
+│   │   │   ├── AboutSection.vue
+│   │   │   ├── ContactSection.vue
+│   │   │   ├── HeroSection.vue
+│   │   │   ├── ProcessSection.vue
+│   │   │   ├── ServicesSection.vue
+│   │   │   └── TechStack.vue
+│   │   └── ui
+│   │       ├── ButtonPrimary.vue
+│   │       ├── MarqueeTicker.vue
+│   │       ├── SectionLabel.vue
+│   │       ├── ServiceCard.vue
+│   │       ├── StatCard.vue
+│   │       └── TechBadge.vue
+│   ├── composables
+│   │   ├── useNeuralNetwork.js
+│   │   ├── useScrollReveal.js
+│   │   └── useTypewriter.js
+│   ├── main.js
+│   ├── router
+│   │   └── index.js
+│   ├── styles
+│   │   ├── animations.css
+│   │   ├── main.css
+│   │   └── typography.css
+│   └── views
+│       └── HomeView.vue
+└── vite.config.js
